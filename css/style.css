@@ -658,6 +658,7 @@ button {
 
 .footer-social {
   margin-left: 70px;
+  margin-right: 93px;
 }
 
 .footer-social-text {
@@ -701,6 +702,73 @@ button {
 
 .footer-social-icon {
   fill: currentColor;
+}
+
+.footer-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-form-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+  margin-bottom: 20px;
+}
+
+.user-mail-footer {
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
+  min-width: 358px;
+  height: 50px;
+  padding-left: 16px;
+  margin-right: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: none;
+}
+
+.footer-form-btn {
+  min-width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding: 10px 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--second-text-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #188ce8;
+}
+
+.footer-form-icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--second-text-color);
+  margin-left: 10px;
 }
 
 /* --------BACKDROP--------- */
@@ -767,6 +835,10 @@ button {
   margin-bottom: 12px;
 }
 
+.modal-field {
+  margin-bottom: 10px;
+}
+
 .modal-label {
   font-weight: 400;
   font-size: 12px;
@@ -776,12 +848,45 @@ button {
   margin-bottom: 4px;
 }
 
+.modal-input-wrap {
+  position: relative;
+}
+
 .modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: none;
   border-radius: 4px;
-  margin-bottom: 10px;
+  padding-left: 42px;
+  padding-right: 42px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+.modal-input:hover,
+.user-comment:focus,
+.user-comment:hover {
+  border-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.modal-input:focus + .modal-icon,
+.modal-input:hover + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  fill: var(--accent-color);
 }
 
 .user-comment {
@@ -789,7 +894,11 @@ button {
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  padding: 12px 16px;
   margin-bottom: 20px;
+  outline: none;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .user-comment::placeholder {
@@ -797,7 +906,53 @@ button {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
-  padding: 12px 16px;
+}
+
+.modal-field-check {
+  margin-bottom: 30px;
+}
+
+.modal-check-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--first-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.modal-check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--first-title-color);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-check-icon {
+  fill: transparent;
+}
+
+.modal-check:checked + .modal-check-text > span {
+  background-color: var(--accent-bg-color);
+  border: none;
+}
+
+.modal-check:checked + .modal-check-text svg {
+  fill: var(--second-text-color);
+}
+
+.modal-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
 }
 
 .modal-sumbit-btn {
@@ -814,4 +969,10 @@ button {
   border-radius: 4px;
   padding: 10px 55px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-sumbit-btn:hover,
+.modal-sumbit-btn:focus {
+  background-color: #188ce8;
 }
