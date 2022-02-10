@@ -731,6 +731,7 @@ button {
   min-width: 358px;
   height: 50px;
   padding-left: 16px;
+  padding-right: 16px;
   margin-right: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
